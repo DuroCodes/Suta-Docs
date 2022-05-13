@@ -3,16 +3,6 @@ sidebar_position: 2
 title: Configuring
 ---
 
-export const cmdOrCtrl = () => {
-  return (
-    <BrowserOnly>
-      <kdb>
-        {window.navigator.platform.match(/^Mac/) ? '⌘' : 'Ctrl'}
-      </kdb>
-    </BrowserOnly>
-  );
-}
-
 Let's configure Suta.
 
 ### What you'll need
@@ -26,7 +16,17 @@ Let's configure Suta.
 
 If you wish to change the bot's messages. Edit your fork of Suta and edit the files in the `src/` directory.
 
-<p>To find text in your project, press <kbd>{cmdOrCtrl()}+F</kbd>.</p> in your code editor.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="win_lin" label="Windows / Linux" default>
+    To find text in your project, press <kbd>Ctrl + F</kbd> in your code editor.
+  </TabItem>
+  <TabItem value="macos" label="MacOS">
+    To find text in your project, press <kbd>⌘ + F</kbd> in your code editor.
+  </TabItem>
+</Tabs>
 
 ## Adding features
 

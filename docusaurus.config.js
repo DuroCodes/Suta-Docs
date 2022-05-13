@@ -6,22 +6,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Suta Documenation',
+  title: 'Suta Docs',
   tagline: 'The documentation for Suta',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.suta.tk',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/suta.png',
+  organizationName: 'durocodes',
+  projectName: 'suta',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  plugins: ['@docusaurus/theme-live-codeblock'],
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -34,10 +30,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/durocodes/suta-docs/tree/master/',
+          routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -49,6 +43,31 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          content: 'Suta - Documentation',
+          property: 'og:title',
+        },
+        {
+          content: 'https://raw.githubusercontent.com/DuroCodes/Suta/master/assets/logo.png',
+          property: 'og:image',
+        },
+        {
+          content: '#2E3037',
+          name: 'theme-color',
+        },
+        {
+          content: 'Suta is an open source ticket system for Discord.',
+          property: 'og:description',
+        },
+      ],
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+      },
+      liveCodeBlock: {
+        playgroundPosition: 'bottom',
+      },
       navbar: {
         title: 'Suta',
         logo: {
@@ -58,9 +77,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'self-hosting/intro',
             position: 'left',
-            label: 'Docs',
+            label: 'Self Hosting',
           },
           {
             href: 'https://github.com/durocodes/suta-docs',
@@ -70,31 +89,13 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
             title: 'Docs',
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                to: '/intro',
               },
             ],
           },
@@ -103,12 +104,11 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/durocodes/suta-docs',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

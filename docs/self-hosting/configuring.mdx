@@ -1,0 +1,25 @@
+---
+sidebar_position: 2
+title: Configuring
+---
+
+export const cmdOrCtrl = () => (window.navigator.platform.match(/^Mac/) ? '⌘' : 'Ctrl');
+
+Let's configure Suta.
+
+### What you'll need
+
+- [Node.js](https://nodejs.org/en/download/) version 14 or above:
+  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- Suta already installed:
+  - Follow the instructions [here](./intro.md) to install it.
+
+## Setting up the bot
+
+If you wish to change the bot's messages. Edit your fork of Suta and edit the files in the `src/` directory.
+
+<p>To find text in your project, press <kbd>{cmdOrCtrl()}+F</kbd>.</p>
+
+## Adding features
+
+If you want to add a command or listener, check the guide [here](./adding.md).

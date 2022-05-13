@@ -102,7 +102,11 @@ const config = {
             items: [
               {
                 label: 'Self Hosting',
-                to: 'self-hosting/intro',
+                to: '/category/self-hosting',
+              },
+              {
+                label: 'Usage',
+                to: '/category/how-to-use-suta',
               },
             ],
           },

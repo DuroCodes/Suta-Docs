@@ -27,6 +27,8 @@ The first thing we need to do is create the basic category.
   - You can add additional options after the name, description, and emoji.
     - `(embed-desc)` - Set the embed description upon creation of a ticket.
     - `(embed-message)` - Set the embed message upon creation of a ticket.
+      - You can put `{user}` inside of the `embed-desc` or `embed-message` to insert the ticket creator.
+      - You can also put `\n` inside of the `embed-desc` or `embed-message` to insert a new line.
 
 Once you've created the category, you can see it in the ticket creation menu.
 

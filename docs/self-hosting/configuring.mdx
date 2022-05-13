@@ -3,7 +3,15 @@ sidebar_position: 2
 title: Configuring
 ---
 
-export const cmdOrCtrl = () => (window.navigator.platform.match(/^Mac/) ? '⌘' : 'Ctrl');
+export const cmdOrCtrl = () => {
+  return (
+    <BrowserOnly>
+      <kdb>
+        {window.navigator.platform.match(/^Mac/) ? '⌘' : 'Ctrl'}
+      </kdb>
+    </BrowserOnly>
+  );
+}
 
 Let's configure Suta.
 

@@ -1,0 +1,176 @@
+---
+sidebar-position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# Settings
+
+Let's start by configuring some settings for Suta.
+
+### What you'll need
+
+- [Suta](https://suta.tk) invited to your server.
+
+## How to setup
+
+Once you have Suta invited to your server, you can configure some settings for it.
+
+If you press <kbd>/</kbd> in your chat, you will see a list of available commands.
+
+Cick on the Suta logo to open the available commands for Suta.
+
+export const style = {
+  borderRadius: '25px',
+};
+
+<img src={useBaseUrl('img/settings-example.png')} style={style} />
+
+All of the settings commands start with `/settings`. You may have to scroll down to see them.
+
+## Available Settings
+
+The current available settings are:
+
+### Role Settings
+
+<Tabs>
+  <TabItem label="Admin Role" value="admin-role">
+    <ul>
+      <li><code>/settings admin-role &lt;role&gt;</code></li>
+      <ul>
+        <li>This is the role of the admins.</li>
+        <li>The users with this role can use the <code>/settings</code> commands.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Support Role" value="support-role">
+    <ul>
+      <li><code>/settings support-role &lt;role&gt;</code></li>
+      <ul>
+        <li>This is the role of the support team.</li>
+        <li>The users with this role can use the <code>/ticket</code> commands.</li>
+      </ul>
+    </ul>
+  </TabItem>
+</Tabs>
+
+### Logging Settings
+
+<Tabs>
+  <TabItem label="Logging" value="logging">
+    <ul>
+      <li><code>/settings logs &lt;enabled&gt; &lt;channel&gt;</code></li>
+      <ul>
+        <li><code>Enabled</code> - Whether to enable/disable logs.</li>
+        <li><code>Channel</code> - The channel to log to.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Transcripts" value="transcripts">
+    <ul>
+      <li><code>/settings transcripts &lt;enabled&gt;</code></li>
+      <ul>
+        <li>Whether to enable/disable transcripts.</li>
+        <li>Transcripts will be sent to the logs channel and the ticket creator.</li>
+      </ul>
+    </ul>
+  </TabItem>
+</Tabs>
+
+<h3>Ticket Settings</h3>
+
+<Tabs>
+  <TabItem label="Max Tickets" value="maxtickets">
+    <ul>
+      <li><code>/settings max-tickets &lt;number&gt;</code></li>
+      <ul>
+        <li>This is the maximum number of tickets that can be opened at the same time per user.</li>
+        <li>If a user tries to open more than this number of tickets, they will be given an error.</li>
+        <li>You can disable tickets by changing the <code>max-tickets</code> to <code>0</code>.</li>
+        <li>You can disable the maximum by changing the <code>max-tickets</code> to <code>999</code>.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Category" value="category">
+    <ul>
+      <li><code>/settings category &lt;category&gt;</code></li>
+      <ul>
+        <li>This is the category of the tickets.</li>
+        <li>New tickets will be created in this category.</li>
+      </ul>
+    </ul>
+  </TabItem>
+</Tabs>
+
+### Menu Options
+
+The `/settings menu` command has many options.
+
+The menu is the selection menu that users use to open tickets.
+
+<Tabs>
+  <TabItem label="Title" value="title">
+    <ul>
+      <li><code>/settings menu title &lt;title&gt;</code></li>
+      <ul>
+        <li>This is the title of the menu.</li>
+        <li>You can change the title of the menu by using this command.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Description" value="description">
+    <ul>
+      <li><code>/settings menu description &lt;description&gt;</code></li>
+      <ul>
+        <li>This is the description of the menu.</li>
+        <li>You can change the description of the menu by using this command.</li>
+        <li>You can disable the description by setting <code>show-description</code> to false.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Footer" value="footer">
+    <ul>
+      <li><code>/settings menu footer &lt;footer&gt;</code></li>
+      <ul>
+        <li>This is the footer of the menu.</li>
+        <li>You can change the footer of the menu by using this command.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Timestamp" value="timestamp">
+    <ul>
+      <li><code>/settings menu timestamp &lt;enabled&gt;</code></li>
+      <ul>
+        <li>Whether to show the timestamp of the ticket selection menu.</li>
+        <li>This will show next to the footer of the menu.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Channel" value="channel">
+    <ul>
+      <li><code>/settings menu channel &lt;channel&gt;</code></li>
+      <ul>
+        <li>This is the channel that the menu will be sent to.</li>
+        <li>You can change the channel that the menu will be sent to by using this command.</li>
+        <li>Make sure users have permission to view this channel so they can create tickets.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Color" value="color">
+    <ul>
+      <li><code>/settings menu color &lt;color&gt;</code></li>
+      <ul>
+        <li>This is the color of the menu.</li>
+        <li>You can change the color of the menu by using this command.</li>
+        <li>This sets the color of the menu embed.</li>
+        <ul>
+          <li>The color must be a hex code.</li>
+          <li>You can disable the color by setting it to <code>#2E3037</code></li>
+        </ul>
+      </ul>
+    </ul>
+  </TabItem>
+</Tabs>

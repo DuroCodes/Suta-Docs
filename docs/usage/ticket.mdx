@@ -1,0 +1,104 @@
+---
+sidebar-position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Tickets
+
+Let's learn the ticket commands and how to use them.
+
+### What you'll need
+
+- [Suta](https://suta.tk) invited to your server.
+- Suta settings already set up. (See [Suta settings](./settings.mdx))
+- Suta categories already set up. (See [Suta categories](./category.md))
+
+## What is a ticket?
+
+Tickets are where users can create tickets and communicate with your support team.
+
+## Commands
+
+### User Management
+
+<Tabs>
+  <TabItem label="Add User" value="add">
+    <ul>
+      <li><code>/ticket add &lt;user&gt;</code></li>
+      <ul>
+        <li>Add a user to the current ticket channel.</li>
+        <li>Adding a user to a ticket allows them to access the ticket channel.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Remove User" value="remove">
+    <ul>
+      <li><code>/ticket remove &lt;user&gt;</code></li>
+      <ul>
+        <li>Remove a user from the current ticket channel.</li>
+        <li>You have to have the user added to the ticket to remove them.</li>
+        <li>Removing the user disables their access to the ticket channel.</li>
+      </ul>
+    </ul>
+  </TabItem>
+</Tabs>
+
+### Claiming
+
+<Tabs>
+  <TabItem label="Claim" value="claim">
+    <ul>
+      <li><code>/ticket claim</code></li>
+      <ul>
+        <li>Claiming a ticket makes it so only you, admins, and the ticket creator can see the ticket.</li>
+        <li>When a ticket is claimed, other members of the support team cannot see the ticket.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Unclaim" value="unclaim">
+    <ul>
+      <li><code>/ticket unclaim</code></li>
+      <ul>
+        <li>Unclaiming a ticket does the opposite of claiming.</li>
+        <li>After you unclaim a ticket, everyone with the support role can view the ticket.</li>
+      </ul>
+    </ul>
+  </TabItem>
+</Tabs>
+
+### Miscellaneous
+
+<Tabs>
+  <TabItem label="Closing" value="claim">
+    <ul>
+      <li><code>/ticket close</code></li>
+      <ul>
+        <li>This command closes the current ticket. It deletes the channel <b>permanently</b></li>
+        <li>If you have logging enabled, it sends a notice to the logs channel.</li>
+        <li>If you have transcripts enabled, it sends the transcript to the creator and the logs channel.</li>
+      </ul>
+      <li>You can also close tickets with the <b>close button</b> in the ticket channel.</li>
+    </ul>
+  </TabItem>
+  <TabItem label="Renaming" value="rename">
+    <ul>
+      <li><code>/ticket rename &lt;new name&gt;</code></li>
+      <ul>
+        <li>Renaming a ticket changes the name of the channel.</li>
+        <li>You can use this for organization purposes.</li>
+        <li>If you use special symbols or spaces, they may not appear in the new name.</li>
+      </ul>
+    </ul>
+  </TabItem>
+  <TabItem label="Menu" value="menu">
+    <ul>
+      <li><code>/ticket menu</code></li>
+      <ul>
+        <li>This sends the ticket menu to the pre-configured ticket menu channel.</li>
+        <li>You can use this command to refresh the menu after creating categories.</li>
+      </ul>
+    </ul>
+  </TabItem>
+</Tabs>

@@ -1,7 +1,10 @@
 ---
 sidebar_position: 2
-title: Configuring
 ---
+
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
+# Configuring
 
 Let's configure Suta.
 
@@ -16,17 +19,19 @@ Let's configure Suta.
 
 If you wish to change the bot's messages. Edit your fork of Suta and edit the files in the `src/` directory.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+export const cmdOrCtrl = () => {
+  return (
+    <BrowserOnly fallback={<kbd>Ctrl + F</kbd>}>
+      {() => {
+        const platform = window.navigator.platform.match(/^Mac/) ? '⌘' : 'Ctrl';
+        console.log(platform);
+        return (<kbd>{platform} + F</kbd>);
+      }}
+    </BrowserOnly>
+  );
+};
 
-<Tabs>
-  <TabItem value="win_lin" label="Windows / Linux" default>
-    To find text in your project, press <kbd>Ctrl + F</kbd> in your code editor.
-  </TabItem>
-  <TabItem value="macos" label="MacOS">
-    To find text in your project, press <kbd>⌘ + F</kbd> in your code editor.
-  </TabItem>
-</Tabs>
+<p>To find text in your project, press {cmdOrCtrl()} in your code editor.</p>
 
 ## Adding features
 

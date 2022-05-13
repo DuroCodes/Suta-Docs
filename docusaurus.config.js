@@ -31,6 +31,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/durocodes/suta-docs/tree/master/',
+          showLastUpdateAuthor: true,
           routeBasePath: '/',
         },
         theme: {
@@ -77,9 +78,15 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'self-hosting/intro',
+            docId: '/category/self-hosting',
             position: 'left',
             label: 'Self Hosting',
+          },
+          {
+            type: 'doc',
+            docId: '/category/how-to-use-suta',
+            position: 'left',
+            label: 'Usage',
           },
           {
             href: 'https://github.com/durocodes/suta-docs',

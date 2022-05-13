@@ -94,8 +94,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/intro',
+                label: 'Self Hosting',
+                to: 'self-hosting/intro',
               },
             ],
           },
